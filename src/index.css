@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dash-line {
+  background: repeating-linear-gradient(
+    90deg,
+    white,
+    white 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+@keyframes moveRoad {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -20px 0;
+  }
+}
+
+.dash-line {
+  animation: moveRoad 0.5s linear infinite;
+  animation-play-state: var(--animation-state, running);
+}
